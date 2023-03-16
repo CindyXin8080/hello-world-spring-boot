@@ -30,7 +30,7 @@ jobs:
         restore-keys: ${{ runner.os }}-m2
 
     - name: Build, run tests, and SonarCloud analysis
-      run: mvn clean test org.sonarsource.scanner.maven:sonar -Dsonar.projectKey=hello-world-spring-boot -Dsonar.organization=cindyxin8080 -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+      run: mvn clean test sonar:sonar -Dsonar.projectKey=hello-world-spring-boot -Dsonar.organization=PlayGround -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${{ secrets.SONAR_TOKEN }}
 
 
 
